@@ -121,38 +121,57 @@
         </div>
 
     <?php
+    $i = 0;
     $test = array_fill(1,75,0);
     function gen(){
         $i = mt_rand(1,75);
         $test[$i] += 1;
-        print ($i."<br>");
-        var_dump($test);
+        // print $i;
+        // var_dump($test);
+        return $i;
     }
     
-    if (isset($_POST["sub"])) {
-        switch ($_POST["sub"]) {
-            case "go": 
-                $_POST["sub"]=NULL;
-                gen();
-                break;
-            // case "reset": 
-            //     echo "reset"; 
-            //     disp();
-            //     break;
-            default:  echo "error"; exit;
-        }
-    }
+    // if (isset($_POST["sub"])) {
+    //     switch ($_POST["sub"]) {
+    //         case "go": 
+    //             $_POST["sub"]=NULL;
+    //             // gen();
+    //             break;
+    //         // case "reset": 
+    //         //     echo "reset"; 
+    //         //     disp();
+    //         //     break;
+    //         default:  echo "error"; exit;
+    //     }
+    // }
     ?>
 
     <form action="" method="post">
     <button  value="go" class="btn" name="sub">
         <!-- Generate Number -->
-        <div class="current" id="current" style="top: 220px; left: 30px;">
-        <div class="button r256 aqua"></div></div>
+        <div class="" id="current" style="top: 220px; left: 30px;">
+        <div class="button r256 aqua">
+        <?php
+        if (isset($_POST["sub"])) {
+            switch ($_POST["sub"]) {
+                case "go": 
+                    $_POST["sub"]=NULL;
+                    print gen();
+                    break;
+                // case "reset": 
+                //     echo "reset"; 
+                //     disp();
+                //     break;
+                default:  echo "error"; exit;
+            }
+        }
+        ?>
+        </div></div>
+
     </button>
     </form>
-        <div class="current" id="current" style="top: 220px; left: 30px;">
-        <div class="button r256 aqua"></div></div>
+        <!-- <div class="current" id="current" style="top: 220px; left: 30px;"> -->
+        <!-- <div class="button r256 aqua"></div></div> -->
 
 
         </div>
