@@ -32,19 +32,19 @@
      <div class="current" style="top:300px;left:360px;">
     <table><tbody>
         <tr>
-          <td><div id="b_1" class=""><div class="button r48 l-green">1</div></div></td>
+          <td><div id="b_1" class="off"><div class="button r48 l-green">1</div></div></td>
           <td><div id="b_6" class="off"><div class="button r48 l-green">6</div></div></td>
           <td><div id="b_11" class="off"><div class="button r48 l-green">11</div></div></td>
-          <td><div id="b_16" class=""><div class="button r48 yellow">16</div></div></td>
+          <td><div id="b_16" class="off"><div class="button r48 yellow">16</div></div></td>
           <td><div id="b_21" class="off"><div class="button r48 yellow">21</div></div></td>
           <td><div id="b_26" class="off"><div class="button r48 yellow">26</div></div></td>
-          <td><div id="b_31" class=""><div class="button r48 orange">31</div></div></td>
+          <td><div id="b_31" class="off"><div class="button r48 orange">31</div></div></td>
           <td><div id="b_36" class="off"><div class="button r48 orange">36</div></div></td>
           <td><div id="b_41" class="off"><div class="button r48 orange">41</div></div></td>
-          <td><div id="b_46" class=""><div class="button r48 purple">46</div></div></td>
+          <td><div id="b_46" class="off"><div class="button r48 purple">46</div></div></td>
           <td><div id="b_51" class="off"><div class="button r48 purple">51</div></div></td>
           <td><div id="b_56" class="off"><div class="button r48 purple">56</div></div></td>
-          <td><div id="b_61" class=""><div class="button r48 aqua">61</div></div></td>
+          <td><div id="b_61" class="off"><div class="button r48 aqua">61</div></div></td>
           <td><div id="b_66" class="off"><div class="button r48 aqua">66</div></div></td>
           <td><div id="b_71" class="off"><div class="button r48 aqua">71</div></div></td>
         </tr>
@@ -120,6 +120,37 @@
         </tbody></table>
         </div>
 
+    <?php
+    $test = array_fill(1,75,0);
+    function gen(){
+        $i = mt_rand(1,75);
+        $test[$i] += 1;
+        print ($i."<br>");
+        var_dump($test);
+    }
+    
+    if (isset($_POST["sub"])) {
+        switch ($_POST["sub"]) {
+            case "go": 
+                $_POST["sub"]=NULL;
+                gen();
+                break;
+            // case "reset": 
+            //     echo "reset"; 
+            //     disp();
+            //     break;
+            default:  echo "error"; exit;
+        }
+    }
+    ?>
+
+    <form action="" method="post">
+    <button  value="go" class="btn" name="sub">
+        <!-- Generate Number -->
+        <div class="current" id="current" style="top: 220px; left: 30px;">
+        <div class="button r256 aqua"></div></div>
+    </button>
+    </form>
         <div class="current" id="current" style="top: 220px; left: 30px;">
         <div class="button r256 aqua"></div></div>
 
@@ -130,5 +161,7 @@
     <!--     - Oliver Wendell Holmes</span> -->
     <div id="log">
     </div>
+
+
 </body>
 </html>
