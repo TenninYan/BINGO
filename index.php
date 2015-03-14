@@ -7,6 +7,7 @@
     <!-- <script src="js/bingo.js" type="text/javascript"></script> -->
     <!-- <script src="js/bingo_ctl.js" type="text/javascript"></script> -->
     <!-- <script src="js/card_view.js" type="text/javascript"></script> -->
+    <script src="js/my_bingo_ctrl.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="bingo" id="bingo">
@@ -146,16 +147,16 @@
     // }
     ?>
 
-    <form action="" method="post">
-    <button  value="go" class="btn" name="sub">
+    <!-- <form action="" method="post" style="top: 220px; left: 30px;"> -->
+    <button  value="go" class="btn" name="sub" >
         <!-- Generate Number -->
-        <div class="" id="current" style="top: 220px; left: 30px;">
+        <div class="" id="current" >
         <div class="button r256 aqua">
         <?php
         if (isset($_POST["sub"])) {
             switch ($_POST["sub"]) {
                 case "go": 
-                    $_POST["sub"]=NULL;
+                    // $_POST["sub"]=NULL;
                     print gen();
                     break;
                 // case "reset": 
@@ -164,7 +165,10 @@
                 //     break;
                 default:  echo "error"; exit;
             }
+        }else{
+            // print ("Start");
         }
+        
         ?>
         </div></div>
 
