@@ -10,17 +10,17 @@
     <script src="js/my_bingo_ctrl.js" type="text/javascript"></script>
 </head>
 <body>
-    <div class="bingo" id="bingo">
-        <span class="walt">BINGO</span>
+    <!-- <div class="bingo" id="bingo"> -->
+        <!-- <span class="walt">BINGO</span> -->
         <div class="a-button" id="clear_button">
             <div class="button aqua r24" style="margin: 1em 1em;">
                 clear</div>
         </div>
-        <div class="a-button" id="new_button">
-            <div class="button aqua r24" style="margin: 1em 1em;">
-                new</div>
-        </div>
-    </div>
+        <!-- <div class="a&#45;button" id="new_button"> -->
+        <!--     <div class="button aqua r24" style="margin: 1em 1em;"> -->
+        <!--         new</div> -->
+        <!-- </div> -->
+    <!-- </div> -->
 
     <div class="current" style="left:360px;">
       <table><tbody><tr>
@@ -123,14 +123,16 @@
 
 
     <!-- <form action="" method="post" style="top: 220px; left: 30px;"> -->
-    <button  value="go" class="btn" name="sub" >
+    <!-- <button> -->
         <!-- Generate Number -->
+        <font size="2em">
         <div class="" id="current" >
         <div class="button r256 aqua" id="number">
         </div></div>
+        </font>
 
-    </button>
-    </form>
+    <!-- </button> -->
+    <!-- </form> -->
         <!-- <div class="current" id="current" style="top: 220px; left: 30px;"> -->
         <!-- <div class="button r256 aqua"></div></div> -->
 

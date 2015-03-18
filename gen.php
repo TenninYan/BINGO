@@ -5,8 +5,12 @@ function gen_number(){
 }
 
 $rs = array(
-    "result" =>  htmlspecialchars(gen_number(),ENT_QUOTES,"utf-8"),
-    // "result" =>  htmlspecialchars("2",ENT_QUOTES,"utf-8"),
+    // for($i=1;$i<6;$i++){
+    // }
+    // "result" =>  htmlspecialchars(gen_number(),ENT_QUOTES,"utf-8"),
+        htmlspecialchars(gen_number(),ENT_QUOTES,"utf-8"),
+        htmlspecialchars(gen_number(),ENT_QUOTES,"utf-8"),
+        htmlspecialchars(gen_number(),ENT_QUOTES,"utf-8"),
 );
 header('Content-type: application/json; charset=utf-8');
 echo json_encode($rs);
