@@ -4,9 +4,6 @@
     <title>BINGO GAME</title>
     <link href="css/bingo.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js" type="text/javascript"></script>
-    <!-- <script src="js/bingo.js" type="text/javascript"></script> -->
-    <!-- <script src="js/bingo_ctl.js" type="text/javascript"></script> -->
-    <!-- <script src="js/card_view.js" type="text/javascript"></script> -->
     <script src="js/my_bingo_ctrl.js" type="text/javascript"></script>
 </head>
 <body>
