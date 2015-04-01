@@ -9,6 +9,10 @@
 <body>
     <!-- <div class="bingo" id="bingo"> -->
         <!-- <span class="walt">BINGO</span> -->
+        <div class="a-button" id="start_button">
+            <div class="button aqua r24" style="margin: 1em 1em;">
+                start</div>
+        </div>
         <div class="a-button" id="clear_button">
             <div class="button aqua r24" style="margin: 1em 1em;">
                 clear</div>
