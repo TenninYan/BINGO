@@ -1,12 +1,16 @@
 $(function(){
+    var drumroll = document.getElementById("audio");
     $('#current').click(function(){
         $.get('gen.php',function(data){
-            var changeSpeed = 200;
-            var dummynum = 20;
-            // for (var i=1; i<=dummynum; i++){
-            //     dummyeffect(i);
-            // }
-            // realeffect();
+            var changeSpeed = 70;
+            var blinkSpeed = 150;
+            var dummynum = 43;
+            var blinknum = 4;
+            drumroll.play();
+                for (var i=1; i<=dummynum; i++){
+                    dummyeffect(i);
+                }
+            realeffect();
 
             temp();
 
@@ -18,7 +22,7 @@ $(function(){
                         .text(data[i])
                         .removeClass('l-green yellow orange purple aqua')
                         .addClass(color[pos]);
-                        $('#b_' + data[i]).removeClass('off');
+                    $('#b_' + data[i]).removeClass('off');
                 },i*changeSpeed)
                 setTimeout(function(){
                     $('#number')
@@ -28,15 +32,21 @@ $(function(){
             function realeffect(){
                 var color = ["l-green", "yellow", "orange", "purple", "aqua"];
                 var pos = Math.floor((data[0] - 1) / 15);
-                setTimeout(function(){
-                    $('#number')
-                        .text(data[0])
-                        .removeClass('l-green yellow orange purple aqua')
-                        .addClass(color[pos]);
-                        // .delay(3000)
-                        // .animate({opacity: '1'},fadeSpeed);
+                for(var t=0; t<blinknum; t++){
+                    setTimeout(function(){
+                        $('#current').addClass('off')
+                        $('#b_' + data[0]).addClass('off');
+                    },(dummynum+1)*changeSpeed+2*t*blinkSpeed)
+                    setTimeout(function(){
+                        $('#current')
+                            .removeClass('off');
+                        $('#number')
+                            .text(data[0])
+                            .removeClass('l-green yellow orange purple aqua')
+                            .addClass(color[pos]);
                         $('#b_' + data[0]).removeClass('off');
-                },(dummynum+1)*changeSpeed)
+                    },(dummynum+1)*changeSpeed+(2*t+1)*blinkSpeed)
+                }
             }
 
             function temp(){
