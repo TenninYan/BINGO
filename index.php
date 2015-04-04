@@ -145,7 +145,7 @@
     <div id="log">
     </div>
 
-    <audio id="audio" src="drumroll.mp3"></audio>
+    <audio id="audio" src="media/drumroll.mp3"></audio>
 
 
 </body>
