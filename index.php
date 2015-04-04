@@ -6,7 +6,7 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js" type="text/javascript"></script>
     <script src="js/my_bingo_ctrl.js" type="text/javascript"></script>
 </head>
-<body>
+<body bgcolor="#000000">
     <!-- <div class="bingo" id="bingo"> -->
         <!-- <span class="walt">BINGO</span> -->
         <div class="a-button" id="start_button">
@@ -145,7 +145,7 @@
     <div id="log">
     </div>
 
-    <audio id="audio" src="drumroll.m4a"></audio>
+    <audio id="audio" src="drumroll.mp3"></audio>
 
 
 </body>

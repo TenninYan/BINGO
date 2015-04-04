@@ -35,7 +35,7 @@ if($numbers[$real_num] == 0){
 
 }while(1);
 //gen_dummy
-for ($i=1;$i<43;$i++){
+for ($i=1;$i<42;$i++){
     do{
         $real_num = gen_number();
         if($numbers[$real_num] == 0){

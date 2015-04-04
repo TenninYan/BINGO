@@ -4,7 +4,7 @@ $(function(){
         $.get('gen.php',function(data){
             var changeSpeed = 70;
             var blinkSpeed = 150;
-            var dummynum = 43;
+            var dummynum = 42;
             var blinknum = 4;
             drumroll.play();
                 for (var i=1; i<=dummynum; i++){
@@ -57,6 +57,7 @@ $(function(){
 
     $('#clear_button').click(function(){
         if(confirm('Are you sure to delete everytinig?')){
+            $.get('start.php',function(data){});
             for (var i=1; i<=75; i++){
                 $('#b_' + i).addClass('off');
             }
