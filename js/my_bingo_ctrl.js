@@ -66,6 +66,10 @@ $(function(){
         }
     });
 
+    $('#input_text').keyup(function(){
+        $('#start_button').removeClass('off');
+    });
+
     $('#start_button').click(function(){
         // console.log('function start');
         $.get('start.php',function(data){
