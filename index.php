@@ -29,6 +29,11 @@
                 start</div>
         </div>
     </div>
+    <div id ="error_message">
+        <!-- <p> Enter your BINGO Room's name to start</p> -->
+        <p></p>
+
+    </div>
 
 
 
