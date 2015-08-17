@@ -66,13 +66,20 @@ $(function(){
         }
     });
 
+    $('#input_text').keyup(function(){
+        $('#start_button').removeClass('off');
+    });
+
     $('#start_button').click(function(){
+        inputText = $('#input_text').val();
+        $('#error_message p').text(inputText);
         // console.log('function start');
-        $.get('start.php',function(data){
-                // console.log(data);
-            // success:function(return_array){alert('success');},
-            // error:function(){alert('error')},
-        });
+        window.location.href = '../main.php';
+        // $.get('start.php',function(data){
+        //         // console.log(data);
+        //     // success:function(return_array){alert('success');},
+        //     // error:function(){alert('error')},
+        // });
     });
 
 });

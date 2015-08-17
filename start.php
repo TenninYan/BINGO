@@ -1,6 +1,7 @@
 <?php
+mkdir('./teny',0777);
 
-$fp = fopen('teny.txt','w');
+$fp = fopen('./teny/teny.txt','w');
 $numbers = array();
 for ($i=0;$i<=75;$i++){
     array_push($numbers,0);
