@@ -74,7 +74,7 @@ $(function(){
         inputText = $('#input_text').val();
         $('#error_message p').text(inputText);
         // console.log('function start');
-        window.location.href = '../main.php';
+        window.location.href = 'main.php';
         // $.get('start.php',function(data){
         //         // console.log(data);
         //     // success:function(return_array){alert('success');},
